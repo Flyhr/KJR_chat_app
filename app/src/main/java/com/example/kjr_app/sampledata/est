@@ -1,0 +1,18 @@
+ db.execSQL("CREATE TABLE doc_info (" +
+                "user_id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "user_name TEXT NOT NULL DEFAULT 'doc'," +
+                "nick_name TEXT NOT NULL DEFAULT 'docName'," +
+                "phone_number TEXT NOT NULL," +
+                "password TEXT NOT NULL," +
+                
+                "sex TEXT," +
+                "email TEXT," +
+                "speciality TEXT ," +
+                "update_time TEXT," +
+                "create_time TEXT ," +
+                "del_flag TEXT DEFAULT '0'," +
+                "avatar TEXT," +
+                "remark TEXT," +
+                "login_date TEXT," +
+                "status TEXT DEFAULT '0'" +
+                ")");

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/my_light_primary"
+        android:layout_height="100dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/login_logo"
+        android:layout_height="200dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:textColor="#333"
+        android:text="登入"/>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="24dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:background="@drawable/login_et_bg"
+            android:layout_height="50dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="50dp"
+                android:src="@drawable/ic_user_foreground"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="请输入手机号" android:textSize="17sp"
+                android:layout_height="match_parent"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/login_et_bg"
+            android:layout_height="50dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="50dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="请输入密码" android:textSize="17sp"
+                android:inputType="textPassword"
+                android:layout_height="match_parent"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!-- 添加记住密码复选框 -->
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="记住密码"  />
+            <TextView
+                android:id="@+id/to_register"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:text="还未注册?"
+                android:layout_gravity="right"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+
+        <!-- 横向排列的单选按钮组 -->
+        <RadioGroup
+                android:id="@+id/login_type_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dp"
+                android:orientation="horizontal">
+            <!-- 关键：横向排列 -->
+
+            <RadioButton
+                android:id="@+id/user_login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="用户"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/doctor_login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="医生"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:text="登入"
+            android:layout_height="50dp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
